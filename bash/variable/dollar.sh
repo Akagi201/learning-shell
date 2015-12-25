@@ -11,5 +11,18 @@
 # $? is the most recent foreground pipeline exit status.
 # $! is the PID of the most recent background command.
 # $0 is the name of the shell or shell script.
+# http://stackoverflow.com/questions/9915610/the-difference-between-and
 
 echo "argv[0]=$0"
+
+function print_args_at {
+  printf "%s\n" "$@"
+}
+
+function print_args_star {
+  printf "%s\n" "$*"
+}
+
+print_args_at "one" "two three" "four"
+
+print_args_star "one" "two three" "four"
