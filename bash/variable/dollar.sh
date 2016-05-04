@@ -14,6 +14,7 @@
 # http://stackoverflow.com/questions/9915610/the-difference-between-and
 
 echo "argv[0]=$0"
+echo $#
 
 function print_args_at {
   printf "%s\n" "$@"
